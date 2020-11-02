@@ -4,7 +4,7 @@
 #
 Name     : fdupes
 Version  : 1.6.1
-Release  : 2
+Release  : 3
 URL      : https://github.com/adrianlopezroche/fdupes/archive/v1.6.1.tar.gz
 Source0  : https://github.com/adrianlopezroche/fdupes/archive/v1.6.1.tar.gz
 Summary  : No detailed summary available
@@ -37,26 +37,27 @@ man components for the fdupes package.
 
 %prep
 %setup -q -n fdupes-1.6.1
+cd %{_builddir}/fdupes-1.6.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564173091
+export SOURCE_DATE_EPOCH=1604358574
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1564173091
+export SOURCE_DATE_EPOCH=1604358574
 rm -rf %{buildroot}
 %make_install
 ## install_append content
