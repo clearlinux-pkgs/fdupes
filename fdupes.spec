@@ -6,10 +6,10 @@
 # autospec commit: b858a2a
 #
 Name     : fdupes
-Version  : 2.3.1
-Release  : 8
-URL      : https://github.com/adrianlopezroche/fdupes/archive/v2.3.1/fdupes-2.3.1.tar.gz
-Source0  : https://github.com/adrianlopezroche/fdupes/archive/v2.3.1/fdupes-2.3.1.tar.gz
+Version  : 2.3.2
+Release  : 9
+URL      : https://github.com/adrianlopezroche/fdupes/archive/v2.3.2/fdupes-2.3.2.tar.gz
+Source0  : https://github.com/adrianlopezroche/fdupes/archive/v2.3.2/fdupes-2.3.2.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -46,10 +46,10 @@ man components for the fdupes package.
 
 
 %prep
-%setup -q -n fdupes-2.3.1
-cd %{_builddir}/fdupes-2.3.1
+%setup -q -n fdupes-2.3.2
+cd %{_builddir}/fdupes-2.3.2
 pushd ..
-cp -a fdupes-2.3.1 buildavx2
+cp -a fdupes-2.3.2 buildavx2
 popd
 
 %build
@@ -57,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1720805587
+export SOURCE_DATE_EPOCH=1721082991
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -111,7 +111,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1720805587
+export SOURCE_DATE_EPOCH=1721082991
 rm -rf %{buildroot}
 export GOAMD64=v2
 GOAMD64=v3
